@@ -1,135 +1,72 @@
-<div align="center">
+# Nikesh Khatri
 
-<img src="./assets/banner.svg" alt="Nikesh Khatri - Software Engineer" width="100%" />
+Software engineer based in Kathmandu, Nepal (`UTC+05:45`). Building production platforms where "roughly right" is wrong: payroll that has to match tax law to the rupee, double-entry ledgers that have to balance, and multi-tenant architectures where tenant data must never cross boundaries.
 
-<br/>
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-nikeshkhatri.com.np-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://nikeshkhatri.com.np)
-&nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nikesh_Khatri-0284c7?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikesh-khatri-2b04582a9/)
-&nbsp;
-[![Email](https://img.shields.io/badge/Email-khatrinikace@gmail.com-ea580c?style=for-the-badge&logo=gmail&logoColor=white)](mailto:khatrinikace@gmail.com)
-&nbsp;
-[![Status](https://img.shields.io/badge/Status-Open_to_Opportunities-22c55e?style=for-the-badge)](https://nikeshkhatri.com.np)
-
-</div>
+[Website](https://nikeshkhatri.com.np) &nbsp;·&nbsp; [Case Studies](https://nikeshkhatri.com.np#work) &nbsp;·&nbsp; [Technical Notes](https://nikeshkhatri.com.np#notes) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/nikesh-khatri-2b04582a9/) &nbsp;·&nbsp; [Email](mailto:khatrinikace@gmail.com)
 
 ---
 
-### 🏛️ Engineering at a Glance
+### Focus & Approach
 
-Software engineer based in **Kathmandu, Nepal** building production SaaS, ERP, and operational platforms where *"roughly right"* is wrong: **payroll** that must legally reconcile with tax authorities, **double-entry ledgers** that have to balance, and **multi-tenant data** that must never cross shops.
+Most of my daily work centers on Python/Django backends and TypeScript/React interfaces for systems that handle money, people, and legal rules. In finance-sensitive and permission-critical domains, correctness takes priority over cleverness. A ledger that does not balance to zero is broken; a multi-tenant query that leaks data across client accounts is a catastrophic failure.
 
-| Dimension | Scope & Evidence | Production Highlights |
-| :--- | :--- | :--- |
-| **🚀 Products Shipped** | **17+ Systems Delivered** | ERP, Multi-Tenant Retail SaaS, GovTech, Biometric Attendance, Audio Streaming |
-| **⚙️ Daily Stack** | **Python, Django, React, TypeScript** | REST APIs, PostgreSQL RLS, Celery, Docker, Automated Test Pipelines |
-| **🛡️ Architecture Focus** | **Isolation & Correctness** | Row-Level Security (RLS), Double-Entry Accounting, IRD/CBMS VAT Compliance |
-| **📍 Location & Status** | **Kathmandu (UTC+05:45)** | Software Engineer @ Goodwish Engineering · Open to high-impact roles |
+I work full-lifecycle: database schema design, transactional boundary management, REST APIs, frontend interfaces, automated test suites, and containerized Linux deployment.
 
 ---
 
-### 📦 Featured Production Systems
+### Selected Systems
 
-> [!NOTE]
-> **A Note on Source Code Visibility:**
-> Most of my production systems were commissioned by enterprise clients or built in private employer repositories. To provide complete transparency into my architectural decisions, full write-ups, schema notes, and interactive walkthroughs are published on **[nikeshkhatri.com.np](https://nikeshkhatri.com.np)**.
+> **Note on code visibility:** Most of my production systems were commissioned by enterprise clients or deployed in private employer repositories. To provide transparency into the underlying architecture, detailed case studies and database notes are documented at [nikeshkhatri.com.np](https://nikeshkhatri.com.np).
 
-#### 🛍️ [Mero Pasal](https://mero-pasal.online) — *Multi-Tenant Retail SaaS for Nepali Shops*
-- **Role:** Sole Engineer (Architecture, Django REST Framework backend, React frontend, Docker deployment).
-- **Core Architecture:** Database-level tenant isolation enforced with **PostgreSQL Row-Level Security (RLS)** — preventing data crossover even if application queries omit tenant scoping.
-- **Key Modules:** Storefront generation, point-of-sale invoicing, IRD/CBMS-oriented VAT billing, and *Khata* (customer credit tracking with ledger trails).
-- **Stack:** `Python` · `Django` · `DRF` · `PostgreSQL (RLS)` · `React` · `TypeScript` · `Docker` · `Caddy`
+#### [Mero Pasal](https://mero-pasal.online)
+*Multi-tenant retail operations and storefront platform for Nepali businesses.*
+- **Tenancy Architecture:** Enforces tenant isolation at the database layer using PostgreSQL Row-Level Security (RLS) and connection-scoped session variables, eliminating the risk of data leaks from forgotten application-level `WHERE` clauses.
+- **Scope:** POS invoicing, IRD/CBMS-oriented VAT billing, customer credit (*khata*) ledger tracking, and public storefront generation.
+- **Stack:** Django, Django REST Framework, PostgreSQL (RLS), React, TypeScript, Docker, Caddy.
 
-#### 🧵 [Garment Manufacturing ERP](https://nikeshkhatri.com.np) — *Order-to-Ledger Factory Operating System*
-- **Role:** Sole Engineer (516 commits, 159 merged pull requests).
-- **Core Architecture:** A **ledger-first double-entry engine** where every commercial action (raw material purchase, cutting ticket, rework, dispatch) atomically writes balanced journal entries directly to the general ledger.
-- **Key Modules:** Merchandising, Work-In-Progress (WIP) tracking with barcode logging, piece-rate SAM payroll, VAT billing, and Bikram Sambat date calculations.
-- **Tech:** `Django` · `PostgreSQL` · `Celery` · `Redis` · `React` · `Tailwind CSS` · `ReportLab` · `Playwright`
+#### Garment Manufacturing ERP
+*Order-to-ledger factory floor management system for textile manufacturing.*
+- **Ledger Architecture:** Built around an immutable double-entry accounting core. Every material movement, cutting ticket, and piece-rate completion emits balanced journal entries within the same database transaction; audit trails rely on compensating entries rather than historical mutation.
+- **Scope:** Merchandising, BOM costing, barcode-based WIP tracking, piece-rate SAM payroll, VAT billing, and dual-calendar (Bikram Sambat / Gregorian) scheduling.
+- **Stack:** Django, DRF, PostgreSQL, Celery, Redis, React, Tailwind CSS, ReportLab.
 
-#### 🏛️ [Digital File Tracking System (FTS)](https://nikeshkhatri.com.np) — *GovTech Workflow Automation*
-- **Role:** Full-Stack Engineer for a Nepali public enterprise.
-- **Core Architecture:** Transitioned a paper-bound bureaucracy into an immutable, auditable digital workflow enforcing strict hierarchical permission boundaries.
-- **Key Modules:** *Darta* (inward registration), *Chalani* (dispatch), *Tippani* (internal executive minute routing), and *Tameli* (archival).
-- **Tech:** `Django 5.2` · `PostgreSQL 16` · `DRF` · `Docker` · `Tailwind CSS`
+#### Digital File Tracking System (FTS)
+*Administrative correspondence and registry tracking for a Nepali public enterprise.*
+- **Permission & Audit Model:** Replaced paper registries with an immutable workflow system governing official document movement (*Darta*, *Chalani*, executive *Tippani* minute sheets, and *Tameli* archiving) with strict departmental role boundaries.
+- **Stack:** Django 5.2, PostgreSQL 16, DRF, Docker.
 
-#### 🅿️ [Bayline Parking Platform](https://nikeshkhatri.com.np) — *Multi-Tenant Parking & Revenue Operations*
-- **Role:** Full-Stack Delivery across web, mobile, and hardware gateways.
-- **Key Modules:** Real-time bay occupancy, barrier gate check-in, Khalti payment gateway integration, thermal ticket printing, and revenue auditing.
-- **Tech:** `Django` · `DRF` · `React` · `PostgreSQL` · `Redis` · `Khalti API`
+#### Bayline Parking Platform
+*Multi-tenant parking operations and revenue reconciliation platform.*
+- **Scope:** Automated barrier gate check-in/check-out, tariff calculations, thermal ticket generation, Khalti payment gateway integration, and multi-tenant revenue auditing.
+- **Stack:** Django, DRF, React, PostgreSQL, Redis.
 
 ---
 
-### 📝 Architecture Notes & Technical Deep Dives
+### Technical Notes
 
-I write in-depth technical case studies breaking down real engineering tradeoffs:
+I write technical essays analyzing real production tradeoffs and schema designs:
 
-- 📖 **[Tenant Isolation with PostgreSQL RLS](https://nikeshkhatri.com.np/notes/tenant-isolation-postgres-rls)**
-  *Why application-level `WHERE tenant_id = ?` clauses inevitably leak in complex joins, and how to use Postgres connection-scoped session variables and RLS policies to guarantee tenant isolation at the database layer.*
-- 📖 **[A Ledger-First ERP Architecture](https://nikeshkhatri.com.np/notes/ledger-first-erp)**
-  *Why treating accounting as a reporting view built on top of invoices fails on credit notes and reversals — and how placing balanced journal entries at the center makes the trial balance the source of truth.*
+- **[Tenant Isolation with PostgreSQL RLS](https://nikeshkhatri.com.np/notes/tenant-isolation-postgres-rls)**  
+  Why relying on application ORM queries for multi-tenancy eventually fails under complex joins, and how to use Postgres session variables and RLS policies to guarantee isolation in the database engine.
 
----
-
-### 🛠️ Technical Skillset & Tooling
-
-```
-Languages & Core     :: Python · TypeScript · JavaScript · SQL (PostgreSQL, MySQL)
-Backend & APIs       :: Django · Django REST Framework · NestJS · Node.js · Celery · WebSockets · OpenAPI
-Frontend             :: React · Next.js · Vite · Tailwind CSS · Redux Toolkit · PWA
-Data & Architecture  :: PostgreSQL (RLS) · Redis · Prisma · Relational Modeling · Double-Entry Ledgers
-Cloud & Operations   :: Docker · Nginx · Caddy · GitHub Actions · CI/CD · Linux · GCP Storage
-Quality & Testing    :: Pytest · Vitest · Playwright · Automated Regression Suites
-Domain Competencies  :: IRD / CBMS Invoicing · Nepal Tax Slabs · SSF/SST Payroll · Bikram Sambat (BS)
-```
-
-<br/>
-
-<div align="center">
-
-| Category | Technologies |
-| :--- | :--- |
-| **Backend & APIs** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white) ![DRF](https://img.shields.io/badge/Django_REST-ff1709?style=flat-square&logo=django&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) |
-| **Database & Architecture** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white) |
-| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) |
-| **DevOps & Testing** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white) ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white) |
-
-</div>
+- **[A Ledger-First ERP](https://nikeshkhatri.com.np/notes/ledger-first-erp)**  
+  Why treating accounting as a reporting layer bolted onto invoices breaks under credit notes and voids, and how placing balanced journal entries at the center makes the trial balance the verifiable source of truth.
 
 ---
 
-### 🧠 Engineering Principles
+### Technical Proficiencies
 
-- ⚖️ **Correctness before cleverness** — Payroll that is off by one rupee is broken. A ledger that does not balance is broken. In finance-sensitive and permission-sensitive systems, boring, verifiably correct code with rigorous test coverage always beats clever shortcuts.
-- 🎯 **Own the problem, not just the ticket** — Requirements, schema design, test suites, deployment configuration, and the late-night production diagnostic are all one responsibility. I follow features through to where real users rely on them without complaint.
-- 📐 **Learn the domain, not just the framework** — Tax slabs, SSF/SST deductions, Darta/Chalani conventions, SAM piece-rate costing — none of these are in framework documentation. I study the actual statutory rules and translate them into intuitive software.
-- ⚡ **AI as an accelerator, not an author** — AI tools excel at research, scaffolding, and test permutations. Every line committed is scrutinized, understood, and owned by the engineer.
-
----
-
-### 📈 Activity & Streak
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com/?user=nikace7&theme=dark&hide_border=true&background=0D1117&ring=10B981&fire=10B981&currStreakLabel=10B981&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B" alt="GitHub Streak Stats" />
-
-</div>
+- **Languages:** Python, TypeScript, JavaScript, SQL
+- **Backend & APIs:** Django, Django REST Framework, Celery, Node.js, NestJS, REST, WebSockets, OpenAPI
+- **Data & Architecture:** PostgreSQL (RLS, indexing, transactional integrity), MySQL, Redis, Prisma, Double-entry ledgers, Multi-tenant architectures
+- **Frontend:** React, Next.js, Vite, Tailwind CSS, Redux Toolkit
+- **Delivery & Quality:** Docker, GitHub Actions (CI/CD), Nginx, Caddy, Pytest, Playwright, Vitest, Linux
+- **Domain Specializations:** IRD / CBMS billing compliance, Nepal income tax slabs, SSF/SST payroll deductions, Bikram Sambat date systems
 
 ---
 
-### 📬 Let's Connect
+### Engineering Principles
 
-Whether you're looking for a software engineer to own critical backend architecture, build multi-tenant SaaS products, or discuss complex ledger systems — I'd love to talk.
-
-<div align="center">
-
-[![Portfolio](https://img.shields.io/badge/Website-nikeshkhatri.com.np-10b981?style=flat-square&logo=googlechrome&logoColor=white)](https://nikeshkhatri.com.np)
-&nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nikesh_Khatri-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikesh-khatri-2b04582a9/)
-&nbsp;
-[![Email](https://img.shields.io/badge/Email-khatrinikace@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:khatrinikace@gmail.com)
-&nbsp;
-[![Resume](https://img.shields.io/badge/Resume-View_CV-475569?style=flat-square&logo=read-the-docs&logoColor=white)](https://nikeshkhatri.com.np/resume)
-
-</div>
+- **Correctness before cleverness:** In financial and permission-sensitive code, simple and obviously correct code covered by automated tests is always superior to clever optimizations.
+- **Own the problem, not the ticket:** Requirements, schema design, edge cases, deployment, and late-night diagnostics are the same job. A feature is only finished when users run it without issue.
+- **Learn the domain, not just the schema:** Framework documentation will not teach tax law, statutory deductions, or government registry rules. Engineering starts with understanding the real-world operational constraints.
