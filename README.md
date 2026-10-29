@@ -26,6 +26,18 @@ I work full-lifecycle: database schema design, transactional boundary management
 
 ---
 
+### At a Glance
+
+| | |
+| :--- | :--- |
+| **Experience** | Software Engineer at **Goodwish Engineering Pvt. Ltd.**, Lalitpur — since August 2024 (full-time, now contract) |
+| **Strongest at** | Multi-tenant data isolation, double-entry ledgers, payroll and tax rules, permission models |
+| **Proof** | 1,400+ tests on Mero Pasal (92% coverage) · 476 backend tests on the Garment ERP (96%) · one system running in a factory |
+| **Education** | BSc CSIT, Prime College, Tribhuvan University (2020–2025) |
+| **Open to** | Remote full-stack and backend roles, and contract work |
+
+---
+
 ### Selected Systems
 
 > **Note on code visibility:** Most of my production systems were commissioned by enterprise clients or deployed in private employer repositories. To provide transparency into the underlying architecture, detailed case studies and database notes are documented at [nikeshkhatri.com.np](https://nikeshkhatri.com.np), and a sanitized code sample of the tenant-isolation design is [available here](https://gist.github.com/nikace7/36738988a91cea8a6acc721f1a7d0dc4).
@@ -35,7 +47,7 @@ I work full-lifecycle: database schema design, transactional boundary management
 [![Tenancy](https://img.shields.io/badge/Tenancy-PostgreSQL_RLS-005222?style=flat-square&logo=postgresql&logoColor=f7f5f1)](https://nikeshkhatri.com.np/notes/tenant-isolation-postgres-rls)
 [![Stack](https://img.shields.io/badge/Stack-Django_·_React_·_Docker-15181e?style=flat-square)](https://mero-pasal.online)
 
-*Multi-tenant retail operations and storefront platform for Nepali businesses.*
+*Independent project · Multi-tenant retail operations and storefront platform for Nepali businesses.*
 - **Tenancy Architecture:** Enforces tenant isolation at the database layer using PostgreSQL Row-Level Security (RLS) and connection-scoped session variables, eliminating the risk of data leaks from forgotten application-level `WHERE` clauses.
 - **Offline-first POS:** A PWA sale queue survives power and internet outages and replays through idempotency-keyed sale and payment APIs, with gapless per-branch invoice numbering allocated under row locks.
 - **Scope:** POS invoicing, append-only stock ledger with moving weighted-average cost, 13% VAT registers, customer credit (*khata*) tracking, and public storefront generation.
@@ -50,7 +62,7 @@ I work full-lifecycle: database schema design, transactional boundary management
 [![Status](https://img.shields.io/badge/Status-In_Production-007136?style=flat-square)](https://nikeshkhatri.com.np)
 [![Stack](https://img.shields.io/badge/Stack-Django_·_PostgreSQL_·_React_·_TypeScript-15181e?style=flat-square)](https://nikeshkhatri.com.np)
 
-*Order-to-ledger factory floor management system, deployed in production for a garment factory.*
+*Independent project · Order-to-ledger factory floor management system, deployed in production for a garment factory.*
 - **Ledger Architecture:** Built around an immutable double-entry accounting core. Every stock, payroll and payment event posts balanced journal entries through a single posting service; debit-XOR-credit is enforced by a database constraint, and corrections use reversing entries rather than historical mutation.
 - **Scope:** Orders, cutting, barcoded bundles and WIP tracking, piece-rate payroll that cannot pay a period twice, per-order job costing, and dual-calendar (Bikram Sambat / Gregorian) dates.
 - **Delivery:** Offline-tolerant PWA with a tablet kiosk mode for the factory floor and a Tauri Windows client; 476 backend tests at 96% coverage and CI-gated deploys with automatic rollback.
@@ -63,7 +75,7 @@ I work full-lifecycle: database schema design, transactional boundary management
 [![Compliance](https://img.shields.io/badge/Workflows-Darta_·_Chalani_·_Tippani-005222?style=flat-square)](https://nikeshkhatri.com.np)
 [![Stack](https://img.shields.io/badge/Stack-Django_5.2_·_PostgreSQL_16_·_Docker-15181e?style=flat-square)](https://nikeshkhatri.com.np)
 
-*Administrative correspondence and registry tracking for a Nepali public enterprise.*
+*At Goodwish Engineering · Administrative correspondence and registry tracking for a Nepali public enterprise.*
 - **Permission & Audit Model:** Replaced paper registries with an immutable workflow system governing official document movement (*Darta*, *Chalani*, executive *Tippani* minute sheets, and *Tameli* archiving) with strict departmental role boundaries.
 - **Stack:** Django 5.2, PostgreSQL 16, DRF, Docker.
 
@@ -74,7 +86,7 @@ I work full-lifecycle: database schema design, transactional boundary management
 [![Integration](https://img.shields.io/badge/Payments-Khalti_Gateway-005222?style=flat-square)](https://nikeshkhatri.com.np)
 [![Stack](https://img.shields.io/badge/Stack-Django_·_DRF_·_React_·_Redis-15181e?style=flat-square)](https://nikeshkhatri.com.np)
 
-*Multi-tenant parking operations and revenue reconciliation platform.*
+*At Goodwish Engineering · Multi-tenant parking operations and revenue reconciliation platform.*
 - **Scope:** Automated barrier gate check-in/check-out, tariff calculations, thermal ticket generation, Khalti payment gateway integration, and multi-tenant revenue auditing.
 - **Stack:** Django, DRF, React, PostgreSQL, Redis.
 
