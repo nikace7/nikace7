@@ -81,14 +81,61 @@ I work full-lifecycle: database schema design, transactional boundary management
 
 <br/>
 
-#### Bayline Parking Platform
+#### SaaS Parking Platform
 ![Domain](https://img.shields.io/badge/Domain-Parking_Operations-15181e?style=flat-square)
 ![Integration](https://img.shields.io/badge/Payments-Khalti_Gateway-005222?style=flat-square)
 ![Stack](https://img.shields.io/badge/Stack-Django_·_DRF_·_React_·_Redis-15181e?style=flat-square)
 
 *At Goodwish Engineering · Multi-tenant parking operations and revenue reconciliation platform.*
-- **Scope:** Automated barrier gate check-in/check-out, tariff calculations, thermal ticket generation, Khalti payment gateway integration, and multi-tenant revenue auditing.
+- **Scope:** Gate check-in/check-out, tariff calculations, thermal ticket generation, Khalti payment gateway integration, and multi-tenant revenue reporting.
 - **Stack:** Django, DRF, React, PostgreSQL, Redis.
+
+<br/>
+
+#### Svara: Voice & Device Studio
+![Domain](https://img.shields.io/badge/Domain-Voice_Kiosks-15181e?style=flat-square)
+![Architecture](https://img.shields.io/badge/Answers-Only_From_Released_Content-005222?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-NestJS_·_Next.js_·_PostgreSQL-15181e?style=flat-square)
+
+*Independent rebuild · Bilingual (English and Nepali) voice assistants for visitor kiosks.*
+- **Releases, not live edits:** Staff publish knowledge as an immutable, hashed release. A conversation searches only its pinned release, and the server checks every passage the model cites against that release before any tool call runs.
+- **No lost commands:** A kiosk's desired release is derived and committed in the same transaction as the staff change that caused it. The command table is the outbox, and Redis only wakes the worker.
+- **Quality:** 190 unit, 173 integration and 46 browser tests, plus a 40-case bilingual conversation evaluation, all green in CI.
+- **Stack:** NestJS, Next.js, TypeScript, PostgreSQL 17, Redis, Caddy, Docker Compose.
+
+<br/>
+
+#### Lattice: Cited Document Q&A
+![Domain](https://img.shields.io/badge/Domain-Document_RAG-15181e?style=flat-square)
+![Architecture](https://img.shields.io/badge/Citations-Server--Checked-005222?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Django_·_pgvector_·_Ollama-15181e?style=flat-square)
+
+*Independent project · A private document workspace whose answers quote the exact passage they rely on.*
+- **Checked citations:** The model returns evidence IDs and quotes. The server rejects any ID it did not retrieve, maps each quote back to a location in the source file, and refuses any answer whose quote does not map completely.
+- **Access in the query:** Restricted collections never appear in a page, a count or a search result, because access is checked before pagination.
+- **Fully local:** E5 embeddings and a Qwen model run on the machine, so documents never leave it. 655 backend tests and an 80-case frozen retrieval evaluation, with the failures recorded alongside the successes.
+- **Stack:** Django, PostgreSQL with pgvector, Celery, React, TypeScript, Ollama, Docker Compose.
+
+<br/>
+
+#### Bayline: Parking Operations
+![Domain](https://img.shields.io/badge/Domain-Cash_Gate_Parking-15181e?style=flat-square)
+![Architecture](https://img.shields.io/badge/Payments-Idempotent-005222?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Django_·_PostgreSQL_·_React-15181e?style=flat-square)
+
+*Independent rebuild · Multi-tenant parking operations for car parks that take cash at the gate.*
+- **No double charges:** Payment and exit are separate idempotent requests, so a retry after a dropped connection repeats only the exit. Checkout recalculates the fee on the server from the pinned tariff.
+- **Gapless receipts:** Per-location receipt numbers are allocated inside the payment transaction, so a rolled-back payment rolls back its number too.
+- **No double bookings:** A PostgreSQL exclusion constraint stops two customers holding the same bay. Money is integer paisa throughout, and 610 backend tests cover it.
+- **Stack:** Django, DRF, PostgreSQL, React, Vite, TypeScript, Caddy, Docker Compose.
+
+---
+
+### Code You Can Read
+
+- **[ParkBuddy](https://github.com/nikace7/parkbuddy):** geospatial parking search and reservations with GeoDjango, PostGIS, Khalti and a PyTorch Nepali chatbot.
+- **[PCOS ultrasound classifier](https://github.com/nikace7/PCOS):** a TensorFlow/Keras CNN that screens pelvic ultrasound images.
+- **[Tenant isolation sample](https://gist.github.com/nikace7/36738988a91cea8a6acc721f1a7d0dc4):** the PostgreSQL RLS design behind Mero Pasal, sanitized.
 
 ---
 
