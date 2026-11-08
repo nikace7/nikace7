@@ -6,9 +6,9 @@ Software engineer based in Kathmandu, Nepal. Building production platforms where
 
 [![Status](https://img.shields.io/badge/Status-Open_to_Opportunities-007136?style=flat-square&logo=statuspage&logoColor=f7f5f1)](https://nikeshkhatri.com.np)
 &nbsp;
-[![Role](https://img.shields.io/badge/Role-Software_Engineer-15181e?style=flat-square)](https://nikeshkhatri.com.np)
+![Role](https://img.shields.io/badge/Role-Software_Engineer-15181e?style=flat-square)
 &nbsp;
-[![Location](https://img.shields.io/badge/Location-Kathmandu%2C_Nepal-15181e?style=flat-square&logo=googlemaps&logoColor=f7f5f1)](https://nikeshkhatri.com.np)
+![Location](https://img.shields.io/badge/Location-Kathmandu%2C_Nepal-15181e?style=flat-square&logo=googlemaps&logoColor=f7f5f1)
 &nbsp;
 [![Website](https://img.shields.io/badge/Website-nikeshkhatri.com.np-005222?style=flat-square&logo=googlechrome&logoColor=f7f5f1)](https://nikeshkhatri.com.np)
 &nbsp;
@@ -57,10 +57,10 @@ I work full-lifecycle: database schema design, transactional boundary management
 <br/>
 
 #### Garment Manufacturing ERP
-[![Domain](https://img.shields.io/badge/Domain-Factory_ERP-15181e?style=flat-square)](https://nikeshkhatri.com.np)
+![Domain](https://img.shields.io/badge/Domain-Factory_ERP-15181e?style=flat-square)
 [![Architecture](https://img.shields.io/badge/Architecture-Double--Entry_Ledger-005222?style=flat-square)](https://nikeshkhatri.com.np/notes/ledger-first-erp)
-[![Status](https://img.shields.io/badge/Status-In_Production-007136?style=flat-square)](https://nikeshkhatri.com.np)
-[![Stack](https://img.shields.io/badge/Stack-Django_·_PostgreSQL_·_React_·_TypeScript-15181e?style=flat-square)](https://nikeshkhatri.com.np)
+![Status](https://img.shields.io/badge/Status-In_Production-007136?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Django_·_PostgreSQL_·_React_·_TypeScript-15181e?style=flat-square)
 
 *Independent project · Order-to-ledger factory floor management system, deployed in production for a garment factory.*
 - **Ledger Architecture:** Built around an immutable double-entry accounting core. Every stock, payroll and payment event posts balanced journal entries through a single posting service; debit-XOR-credit is enforced by a database constraint, and corrections use reversing entries rather than historical mutation.
@@ -71,9 +71,9 @@ I work full-lifecycle: database schema design, transactional boundary management
 <br/>
 
 #### Digital File Tracking System (FTS)
-[![Domain](https://img.shields.io/badge/Domain-GovTech_Workflow-15181e?style=flat-square)](https://nikeshkhatri.com.np)
-[![Compliance](https://img.shields.io/badge/Workflows-Darta_·_Chalani_·_Tippani-005222?style=flat-square)](https://nikeshkhatri.com.np)
-[![Stack](https://img.shields.io/badge/Stack-Django_5.2_·_PostgreSQL_16_·_Docker-15181e?style=flat-square)](https://nikeshkhatri.com.np)
+![Domain](https://img.shields.io/badge/Domain-GovTech_Workflow-15181e?style=flat-square)
+![Compliance](https://img.shields.io/badge/Workflows-Darta_·_Chalani_·_Tippani-005222?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Django_5.2_·_PostgreSQL_16_·_Docker-15181e?style=flat-square)
 
 *At Goodwish Engineering · Administrative correspondence and registry tracking for a Nepali public enterprise.*
 - **Permission & Audit Model:** Replaced paper registries with an immutable workflow system governing official document movement (*Darta*, *Chalani*, executive *Tippani* minute sheets, and *Tameli* archiving) with strict departmental role boundaries.
@@ -82,9 +82,9 @@ I work full-lifecycle: database schema design, transactional boundary management
 <br/>
 
 #### Bayline Parking Platform
-[![Domain](https://img.shields.io/badge/Domain-Parking_Operations-15181e?style=flat-square)](https://nikeshkhatri.com.np)
-[![Integration](https://img.shields.io/badge/Payments-Khalti_Gateway-005222?style=flat-square)](https://nikeshkhatri.com.np)
-[![Stack](https://img.shields.io/badge/Stack-Django_·_DRF_·_React_·_Redis-15181e?style=flat-square)](https://nikeshkhatri.com.np)
+![Domain](https://img.shields.io/badge/Domain-Parking_Operations-15181e?style=flat-square)
+![Integration](https://img.shields.io/badge/Payments-Khalti_Gateway-005222?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Django_·_DRF_·_React_·_Redis-15181e?style=flat-square)
 
 *At Goodwish Engineering · Multi-tenant parking operations and revenue reconciliation platform.*
 - **Scope:** Automated barrier gate check-in/check-out, tariff calculations, thermal ticket generation, Khalti payment gateway integration, and multi-tenant revenue auditing.
@@ -108,11 +108,11 @@ I write technical essays analyzing real production tradeoffs and schema designs:
 
 | Domain | Stack & Core Tools |
 | :--- | :--- |
-| **Backend & APIs** | [![Python](https://img.shields.io/badge/Python_3.12-15181e?style=flat-square&logo=python&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Django](https://img.shields.io/badge/Django_5-005222?style=flat-square&logo=django&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![DRF](https://img.shields.io/badge/Django_REST-005222?style=flat-square&logo=django&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Celery](https://img.shields.io/badge/Celery-15181e?style=flat-square&logo=celery&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Node.js](https://img.shields.io/badge/Node.js-15181e?style=flat-square&logo=nodedotjs&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![NestJS](https://img.shields.io/badge/NestJS-15181e?style=flat-square&logo=nestjs&logoColor=f7f5f1)](https://nikeshkhatri.com.np) |
-| **Data & Architecture** | [![PostgreSQL RLS](https://img.shields.io/badge/PostgreSQL_RLS-005222?style=flat-square&logo=postgresql&logoColor=f7f5f1)](https://nikeshkhatri.com.np/notes/tenant-isolation-postgres-rls) [![Redis](https://img.shields.io/badge/Redis-15181e?style=flat-square&logo=redis&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Double-Entry](https://img.shields.io/badge/Double--Entry_Ledgers-005222?style=flat-square)](https://nikeshkhatri.com.np/notes/ledger-first-erp) [![Prisma](https://img.shields.io/badge/Prisma-15181e?style=flat-square&logo=prisma&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![MySQL](https://img.shields.io/badge/MySQL-15181e?style=flat-square&logo=mysql&logoColor=f7f5f1)](https://nikeshkhatri.com.np) |
-| **Frontend** | [![TypeScript](https://img.shields.io/badge/TypeScript-15181e?style=flat-square&logo=typescript&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![React](https://img.shields.io/badge/React_19-15181e?style=flat-square&logo=react&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Next.js](https://img.shields.io/badge/Next.js-15181e?style=flat-square&logo=nextdotjs&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-15181e?style=flat-square&logo=tailwindcss&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Vite](https://img.shields.io/badge/Vite-15181e?style=flat-square&logo=vite&logoColor=f7f5f1)](https://nikeshkhatri.com.np) |
-| **DevOps & Quality** | [![Docker](https://img.shields.io/badge/Docker-15181e?style=flat-square&logo=docker&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-15181e?style=flat-square&logo=githubactions&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Pytest](https://img.shields.io/badge/Pytest-005222?style=flat-square&logo=pytest&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Playwright](https://img.shields.io/badge/Playwright-15181e?style=flat-square&logo=playwright&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Caddy](https://img.shields.io/badge/Caddy-15181e?style=flat-square&logo=caddy&logoColor=f7f5f1)](https://nikeshkhatri.com.np) [![Nginx](https://img.shields.io/badge/Nginx-15181e?style=flat-square&logo=nginx&logoColor=f7f5f1)](https://nikeshkhatri.com.np) |
-| **Domain & Compliance** | [![Nepal Tax Slabs](https://img.shields.io/badge/Nepal_Tax_Slabs-005222?style=flat-square)](https://nikeshkhatri.com.np) [![SSF/SST Payroll](https://img.shields.io/badge/SSF%2FSST_Payroll-005222?style=flat-square)](https://nikeshkhatri.com.np) [![VAT Registers](https://img.shields.io/badge/VAT_Registers-005222?style=flat-square)](https://nikeshkhatri.com.np) [![Bikram Sambat](https://img.shields.io/badge/Bikram_Sambat_Dates-15181e?style=flat-square)](https://nikeshkhatri.com.np) |
+| **Backend & APIs** | ![Python](https://img.shields.io/badge/Python_3.12-15181e?style=flat-square&logo=python&logoColor=f7f5f1) ![Django](https://img.shields.io/badge/Django_5-005222?style=flat-square&logo=django&logoColor=f7f5f1) ![DRF](https://img.shields.io/badge/Django_REST-005222?style=flat-square&logo=django&logoColor=f7f5f1) ![Celery](https://img.shields.io/badge/Celery-15181e?style=flat-square&logo=celery&logoColor=f7f5f1) ![Node.js](https://img.shields.io/badge/Node.js-15181e?style=flat-square&logo=nodedotjs&logoColor=f7f5f1) ![NestJS](https://img.shields.io/badge/NestJS-15181e?style=flat-square&logo=nestjs&logoColor=f7f5f1) |
+| **Data & Architecture** | [![PostgreSQL RLS](https://img.shields.io/badge/PostgreSQL_RLS-005222?style=flat-square&logo=postgresql&logoColor=f7f5f1)](https://nikeshkhatri.com.np/notes/tenant-isolation-postgres-rls) ![Redis](https://img.shields.io/badge/Redis-15181e?style=flat-square&logo=redis&logoColor=f7f5f1) [![Double-Entry](https://img.shields.io/badge/Double--Entry_Ledgers-005222?style=flat-square)](https://nikeshkhatri.com.np/notes/ledger-first-erp) ![Prisma](https://img.shields.io/badge/Prisma-15181e?style=flat-square&logo=prisma&logoColor=f7f5f1) ![MySQL](https://img.shields.io/badge/MySQL-15181e?style=flat-square&logo=mysql&logoColor=f7f5f1) |
+| **Frontend** | ![TypeScript](https://img.shields.io/badge/TypeScript-15181e?style=flat-square&logo=typescript&logoColor=f7f5f1) ![React](https://img.shields.io/badge/React_19-15181e?style=flat-square&logo=react&logoColor=f7f5f1) ![Next.js](https://img.shields.io/badge/Next.js-15181e?style=flat-square&logo=nextdotjs&logoColor=f7f5f1) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-15181e?style=flat-square&logo=tailwindcss&logoColor=f7f5f1) ![Vite](https://img.shields.io/badge/Vite-15181e?style=flat-square&logo=vite&logoColor=f7f5f1) |
+| **DevOps & Quality** | ![Docker](https://img.shields.io/badge/Docker-15181e?style=flat-square&logo=docker&logoColor=f7f5f1) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-15181e?style=flat-square&logo=githubactions&logoColor=f7f5f1) ![Pytest](https://img.shields.io/badge/Pytest-005222?style=flat-square&logo=pytest&logoColor=f7f5f1) ![Playwright](https://img.shields.io/badge/Playwright-15181e?style=flat-square&logo=playwright&logoColor=f7f5f1) ![Caddy](https://img.shields.io/badge/Caddy-15181e?style=flat-square&logo=caddy&logoColor=f7f5f1) ![Nginx](https://img.shields.io/badge/Nginx-15181e?style=flat-square&logo=nginx&logoColor=f7f5f1) |
+| **Domain & Compliance** | ![Nepal Tax Slabs](https://img.shields.io/badge/Nepal_Tax_Slabs-005222?style=flat-square) ![SSF/SST Payroll](https://img.shields.io/badge/SSF%2FSST_Payroll-005222?style=flat-square) ![VAT Registers](https://img.shields.io/badge/VAT_Registers-005222?style=flat-square) ![Bikram Sambat](https://img.shields.io/badge/Bikram_Sambat_Dates-15181e?style=flat-square) |
 
 ---
 
