@@ -31,6 +31,18 @@ Private document Q&A whose answers quote the exact passage they rely on.
 - Runs fully local (E5 embeddings, a Qwen model through Ollama). 655 backend tests and an 80-case frozen retrieval evaluation that records its failures.
 - Django, PostgreSQL with pgvector, Celery, React, TypeScript.
 
+### [Svara](https://github.com/nikace7/svara) · [case study](https://nikeshkhatri.com.np/work/svara)
+Bilingual (English and Nepali) voice assistants for visitor kiosks.
+- Staff publish knowledge as an immutable release; a conversation searches only its pinned release, and the server checks every cited passage before any tool call runs.
+- A kiosk's desired release is committed in the same transaction as the change that caused it, so no schedule change is lost. 409 automated tests plus a bilingual conversation evaluation.
+- NestJS, Next.js, TypeScript, PostgreSQL, Redis.
+
+### [Bayline](https://github.com/nikace7/bayline-parking) · [case study](https://nikeshkhatri.com.np/work/bayline)
+Multi-tenant parking operations for car parks that take cash at the gate.
+- Payment and exit are separate idempotent requests, so a retry after a dropped connection never charges twice. Receipt numbers are gapless because they are allocated inside the payment transaction.
+- A PostgreSQL exclusion constraint stops two customers holding the same bay. Money is integer paisa throughout, with 610 backend tests.
+- Django, DRF, PostgreSQL, React, TypeScript.
+
 ### [ParkBuddy](https://github.com/nikace7/parkbuddy)
 Geospatial parking search and reservations with GeoDjango, PostGIS, Khalti payments and a PyTorch Nepali chatbot.
 
@@ -47,7 +59,6 @@ These belong to clients or my employer, so the code stays private. Case studies 
 - **Digital File Tracking System** (Goodwish). Replaced paper registries for a public enterprise: *Darta*, *Chalani* and *Tippani* workflows with strict departmental permissions and an audit trail.
 - **Attendance & Payroll SaaS** (Goodwish). Multi-tenant attendance from ADMS terminals, payroll and Nepali tax rules.
 - **SaaS Parking Platform** (Goodwish). Gate check-in and check-out, tariffs, Khalti payments and multi-tenant revenue reports.
-- **Svara** and **Bayline** (independent rebuilds). Bilingual voice kiosks that answer only from released content (409 tests), and cash-gate parking with idempotent payments and gapless receipts (610 backend tests).
 
 ---
 
